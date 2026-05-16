@@ -1,0 +1,20 @@
+# filename: backend/main.py
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from routers import autocurriculum_rl
+
+app = FastAPI(title="AutoCurriculum RL Engine")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(autocurriculum_rl.router, prefix="/autocurriculum", tags=["AutoCurriculum RL"])
+
+@app.get("/")
+def root():
+    return {"status": "ok", "message": "AutoCurriculum RL Backend is running"}
