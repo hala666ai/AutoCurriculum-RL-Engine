@@ -1,0 +1,24 @@
+# filename: backend/db.py
+
+from typing import Dict, Any
+from datetime import datetime
+
+FAKE_DB: Dict[str, Any] = {
+    "students": {},
+    "logs": [],
+}
+
+def save_student_state(student_id: str, state: dict):
+    FAKE_DB["students"][student_id] = state
+
+def get_student_state(student_id: str) -> dict:
+    return FAKE_DB["students"].get(student_id, {})
+
+def log_event(event_type: str, payload: dict):
+    FAKE_DB["logs"].append(
+        {
+            "type": event_type,
+            "payload": payload,
+            "timestamp": datetime.utcnow().isoformat(),
+        }
+    )
