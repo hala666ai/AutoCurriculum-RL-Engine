@@ -1,0 +1,64 @@
+
+AutoCurriculum RL Engine — Reinforcement Learning for Math Curricula
+
+AutoCurriculum RL Engine is a self‑learning system that designs personalized math curricula using reinforcement learning. It dynamically selects exercise types and difficulty levels, evaluates student responses, and refines its policy to maximize accuracy, speed, and long‑term mastery.
+
+---
+
+📂 Project Structure
+`
+AutoCurriculum-RL-Engine/
+├── python/
+│   ├── autocurriculum.py       # main Python simulation
+│   ├── student_env.py          # environment class
+│   ├── agent.py                # RL agent class
+│   └── run_experiments.py      # entry point
+│
+├── java/
+│   └── Main.java               # Java version (public class Main)
+│
+└── README.md                   # documentation
+`
+
+---
+
+▶️ Running the Project
+
+Python
+1. Install Python 3.8+  
+2. (Optional) Install NumPy:
+   `
+   pip install numpy
+   `
+3. Run the simulation:
+   `
+   python autocurriculum.py
+   `
+   or:
+   `
+   python run_experiments.py
+   `
+
+Java
+1. Save file as Main.java  
+2. Compile and run:
+   `
+   javac Main.java
+   java Main
+   `
+
+---
+
+📦 Dependencies
+- Python: none (optional: numpy for advanced features)  
+- Java: JDK only  
+
+---
+
+🧩 Extended Description
+AutoCurriculum RL Engine is an advanced educational AI system that applies reinforcement learning to optimize math curricula. By modeling student performance as a dynamic environment, the agent selects exercises across multiple domains, adjusting difficulty and problem type to maximize learning efficiency. Each student response generates a reward signal reflecting accuracy, speed, and error reduction, enabling the agent to refine its policy and discover optimal learning paths. Unlike static adaptive systems, AutoCurriculum evolves curricula through experimentation, analytics, and continuous feedback, making it a powerful tool for intelligent tutoring, automated assessment, and AI‑driven education research.
+
+---
+
+📜 License
+MIT License
