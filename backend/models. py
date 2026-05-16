@@ -1,0 +1,22 @@
+# filename: backend/models.py
+
+from pydantic import BaseModel
+from typing import List, Optional, Dict
+
+class PerformanceRecord(BaseModel):
+    topic: str
+    difficulty: str
+    score: float
+    timestamp: Optional[str] = None
+
+class CurriculumRequest(BaseModel):
+    student_id: str
+    history: Optional[Dict] = None
+    recent_performance: Optional[List[PerformanceRecord]] = None
+
+class CurriculumResponse(BaseModel):
+    student_id: str
+    next_topic: str
+    difficulty: str
+    recommended_exercises: List[str]
+    rationale: str
